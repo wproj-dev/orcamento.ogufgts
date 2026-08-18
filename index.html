@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orçamento Geral da União - Programa 2319</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="presentation-wrapper">
+    
+    <!-- DASHBOARD ÚNICO -->
+    <div class="slide-card">
+      
+      <!-- Cabeçalho Principal Centralizado -->
+      <header class="dashboard-header">
+        <h1>Orçamento Geral da União</h1>
+        <h3>Programa 2319</h3>
+      </header>
+
+      <!-- SEÇÃO 1: EXECUÇÃO ORÇAMENTÁRIA -->
+      <section class="dashboard-section">
+        <h2 class="section-title-padrao">Execução Orçamentária</h2>
+        
+        <!-- Cards Gerais de Resumo -->
+        <div class="cards-row" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="info-card">
+            <h4>Dotação Atualizada</h4>
+            <strong id="limite-total" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
+          </div>
+          <div class="info-card">
+            <h4>Crédito Disponível (Saldo)</h4>
+            <strong id="val-saldo" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
+            <small id="pct-saldo" style="display:block; color: #64748b; font-weight: 600;">0%</small>
+          </div>
+          <div class="info-card">
+            <h4>Empenhado</h4>
+            <strong id="val-empenhado" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
+            <small id="pct-empenhado" style="display:block; color: #64748b; font-weight: 600;">0%</small>
+          </div>
+          <div class="info-card card-bloqueado">
+            <h4>Bloqueado</h4>
+            <strong id="val-bloqueado" style="font-size: 1.4rem; color: #0f172a;">R$ 0,00</strong>
+            <small id="pct-bloqueado" style="display:block; color: #64748b; font-weight: 600;">0%</small>
+          </div>
+        </div>
+
+        <!-- Quadro de Ações Orçamentárias em Menu Suspenso (Accordion) -->
+        <div style="margin-bottom: 24px;">
+          <details class="actions-dropdown-container">
+            <summary class="actions-dropdown-summary">
+              <h3 class="actions-title" style="display:inline; margin:0;">Ações Orçamentárias (Clique para expandir/ocultar)</h3>
+            </summary>
+            <div class="actions-dropdown-content" id="tabela-acoes-container">
+              <!-- A tabela detalhada será injetada aqui -->
+            </div>
+          </details>
+        </div>
+
+        <!-- Valores Separados por Tipo -->
+        <h3 class="actions-title">Empenhado por RP</h3>
+        <div class="cards-row" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="info-card card-discricionario">
+            <h4>Discricionário <small>(RP 2)</small></h4>
+            <strong id="eof-discricionario" style="font-size: 1.3rem; color: #0f172a;">R$ 0,00</strong>
+          </div>
+          <div class="info-card card-pac">
+            <h4>PAC <small>(RP 3)</small></h4>
+            <strong id="eof-pac" style="font-size: 1.3rem; color: #0f172a;">R$ 0,00</strong>
+          </div>
+          <div class="info-card card-emendas">
+            <h4>Emendas <small>(RP 6, 7, 8 ou 9)</small></h4>
+            <strong id="eof-emendas" style="font-size: 1.3rem; color: #0f172a;">R$ 0,00</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-section"></div>
+
+      <!-- SEÇÃO 2: EXECUÇÃO FINANCEIRA E PAGAMENTOS -->
+      <section class="dashboard-section">
+        <h2 class="section-title-padrao">Execução Financeira e Pagamentos</h2>
+
+        <div class="flow-card-main">
+          <div class="flow-header-main">
+            <span>PAGAMENTOS EFETUADOS</span>
+            <strong id="pag-acumulado" class="green-text" style="font-size: 2rem;">R$ 0,00</strong>
+          </div>
+
+          <div class="flow-rows-container">
+            <div class="flow-row-item">
+              <div class="flow-row-header">
+                <span>Orçamento Discricionário</span>
+                <div style="text-align: right;">
+                  <div style="font-size: 0.9rem; color: #475569; margin-bottom: 3px;">
+                    Valor pago: <strong id="pag-discricionario" style="font-weight: 700; color: #0f172a;">R$ 0,00</strong>
+                  </div>
+                  <div style="font-size: 0.9rem; color: #475569;">
+                    Necessidade Financeira: <span style="font-weight: 700; color: #0f172a;">R$ 349.036.233,04</span>
+                  </div>
+                </div>
+              </div>
+              <ul class="subgroup-bullets">
+                <li>Restos a Pagar RAP: <strong id="discricionario-rap">R$ 0,00</strong></li>
+                <li>Exercício Corrente: <strong id="discricionario-ex">R$ 0,00</strong></li>
+              </ul>
+            </div>
+
+            <div class="flow-row-item">
+              <div class="flow-row-header">
+                <span>Emendas Parlamentares</span>
+                <div style="text-align: right;">
+                  <div style="font-size: 0.9rem; color: #475569; margin-bottom: 3px;">
+                    Valor pago: <strong id="pag-emendas" style="font-weight: 700; color: #0f172a;">R$ 0,00</strong>
+                  </div>
+                  <div style="font-size: 0.9rem; color: #475569;">
+                    Necessidade Financeira: <span style="font-weight: 700; color: #0f172a;">R$ 175.245.519,77</span>
+                  </div>
+                </div>
+              </div>
+              <ul class="subgroup-bullets">
+                <li>Restos a Pagar RAP: <strong id="emendas-rap">R$ 0,00</strong></li>
+                <li>Exercício Corrente: <strong id="emendas-ex">R$ 0,00</strong></li>
+              </ul>
+            </div>
+
+            <div class="flow-row-item">
+              <div class="flow-row-header">
+                <span>PAC</span>
+                <div style="text-align: right;">
+                  <div style="font-size: 0.9rem; color: #475569; margin-bottom: 3px;">
+                    Valor pago: <strong id="pag-pac" style="font-weight: 700; color: #0f172a;">R$ 0,00</strong>
+                  </div>
+                  <div style="font-size: 0.9rem; color: #475569;">
+                    Necessidade Financeira: <span style="font-weight: 700; color: #0f172a;">R$ 59.724.976,53</span>
+                  </div>
+                </div>
+              </div>
+              <ul class="subgroup-bullets">
+                <li>Restos a Pagar RAP: <strong id="pac-rap">R$ 0,00</strong></li>
+                <li>Exercício Corrente: <strong id="pac-ex">R$ 0,00</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-section"></div>
+
+      <!-- SEÇÃO 3: PAGAMENTOS PENDENTES DE TED (ESTÁTICA) -->
+      <section class="dashboard-section">
+        <h2 class="section-title-padrao">Pagamentos Pendentes de TED</h2>
+        <div style="background: #ffffff; border-radius: 8px; padding: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 2px solid #e2e8f0; color: #475569;">
+                <th style="padding: 10px;">Órgão</th>
+                <th style="padding: 10px; text-align: center;">Resultado Primário (RP)</th>
+                <th style="padding: 10px; text-align: right;">Soma do Repasse</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: #ffffff; border-bottom: 1px solid #edf2f7;">
+                <td style="padding: 10px; font-weight: 700; color: #0f172a;">CBTU</td>
+                <td style="padding: 10px; text-align: center; color: #334155;">3</td>
+                <td style="padding: 10px; text-align: right; color: #334155;">R$ 9.099.250,00</td>
+              </tr>
+              <tr style="background-color: #f8fafc; border-bottom: 1px solid #edf2f7;">
+                <td style="padding: 10px; font-weight: 700; color: #0f172a;">CODEVASF</td>
+                <td style="padding: 10px; text-align: center; color: #334155;">2</td>
+                <td style="padding: 10px; text-align: right; color: #334155;">R$ 5.950.505,43</td>
+              </tr>
+              <tr style="background-color: #ffffff; border-bottom: 1px solid #edf2f7;">
+                <td style="padding: 10px; font-weight: 700; color: #0f172a;">CODEVASF</td>
+                <td style="padding: 10px; text-align: center; color: #334155;">9</td>
+                <td style="padding: 10px; text-align: right; color: #334155;">R$  33.735.760,60 </td>
+              </tr>
+              <tr style="background-color: #f8fafc; border-bottom: 1px solid #edf2f7;">
+                <td style="padding: 10px; font-weight: 700; color: #0f172a;">SUDECO</td>
+                <td style="padding: 10px; text-align: center; color: #334155;">2</td>
+                <td style="padding: 10px; text-align: right; color: #334155;">R$ 5.368.894,11</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr style="border-top: 2px solid #cbd5e1; font-weight: bold; background-color: #f1f5f9;">
+                <td style="padding: 10px; color: #0f172a;" colspan="2">Total Geral</td>
+                <td style="padding: 10px; text-align: right; color: #0f172a;">R$ 54.154.410,14</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <div class="divider-section"></div>
+
+      <!-- SEÇÃO DE DETALHAMENTO COM POWER BI (MENU SUSPENSO) -->
+      <section class="dashboard-section" style="margin-top: 40px;">
+        <details class="actions-dropdown-container">
+          <summary class="actions-dropdown-summary">
+            <h2 class="section-title-padrao" style="display:inline; margin:0;">Detalhamento Gerencial (Power BI) (Clique para expandir/ocultar)</h2>
+          </summary>
+          <div class="actions-dropdown-content" style="margin-top: 16px;">
+            <div class="powerbi-container">
+              <iframe title="painelgerencial" 
+                      src="https://app.fabric.microsoft.com/view?r=eyJrIjoiMzFkYzczZjYtNTQwMC00ODMxLTg5N2UtOGYyZmZiMDNmMTRkIiwidCI6IjFmMWJlODA0LWViZGYtNDJmNC1iZGExLTdmMjlhYmU2ZDQ3YSJ9" 
+                      width="100%" 
+                      height="600px" 
+                      frameborder="0" 
+                      allowFullScreen="true">
+              </iframe>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <footer class="slide-footer">
+        <span>2026</span>
+      </footer>
+    </div> 
+  </div> 
+
+  <script src="script.js"></script>
+</body>
+</html>

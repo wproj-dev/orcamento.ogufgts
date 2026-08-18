@@ -1,0 +1,194 @@
+[
+    {
+        "EXECUÇÃO 2319 2026":null,
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"Filtro do relatório:",
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"({Item Informação} = DOTACAO ATUALIZADA, DESPESAS EMPENHADAS (CONTROLE EMPENHO), 19:CREDITO DISPONIVEL, 20:CREDITO INDISPONIVEL) E ({Ano Lançamento} = 2026) E ({Mês Lançamento} ({Código Numérico (AAAAMM)}) = {Último Mês SIAFI Carregado} (LastSiafiLoadMonth_AAAAMM)) E ({Programa Governo} (Código) = \"2319\")",
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":null,
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"Filtro de exibição:",
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"{Saldo - R$ (Item Informação)} <> 0",
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":null,
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"Páginas:",
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"Métrica: Saldo - R$ (Item Informação)",
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"Mês Lançamento: AGO\/2026",
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":null,
+        "Unnamed: 1":null,
+        "Unnamed: 2":null,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"Ação Governo",
+        "Unnamed: 1":"Resultado EOF",
+        "Unnamed: 2":"13",
+        "Unnamed: 3":"19",
+        "Unnamed: 4":"20",
+        "Unnamed: 5":"29"
+    },
+    {
+        "EXECUÇÃO 2319 2026":null,
+        "Unnamed: 1":null,
+        "Unnamed: 2":"DOTACAO ATUALIZADA",
+        "Unnamed: 3":"CREDITO DISPONIVEL",
+        "Unnamed: 4":"CREDITO INDISPONIVEL",
+        "Unnamed: 5":"DESPESAS EMPENHADAS (CONTROLE EMPENHO)"
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00SZ",
+        "Unnamed: 1":"2",
+        "Unnamed: 2":50000,
+        "Unnamed: 3":null,
+        "Unnamed: 4":50000,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00SZ",
+        "Unnamed: 1":"6",
+        "Unnamed: 2":400000,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":400000
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00T0",
+        "Unnamed: 1":"2",
+        "Unnamed: 2":50000,
+        "Unnamed: 3":null,
+        "Unnamed: 4":50000,
+        "Unnamed: 5":null
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00T1",
+        "Unnamed: 1":"2",
+        "Unnamed: 2":1000000,
+        "Unnamed: 3":0.89,
+        "Unnamed: 4":371506,
+        "Unnamed: 5":628493.11
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00T1",
+        "Unnamed: 1":"3",
+        "Unnamed: 2":31340879,
+        "Unnamed: 3":null,
+        "Unnamed: 4":null,
+        "Unnamed: 5":31340879
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00T1",
+        "Unnamed: 1":"6",
+        "Unnamed: 2":64382751,
+        "Unnamed: 3":4513875,
+        "Unnamed: 4":1250004,
+        "Unnamed: 5":58618872
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00T1",
+        "Unnamed: 1":"7",
+        "Unnamed: 2":256367542,
+        "Unnamed: 3":3896236,
+        "Unnamed: 4":71936361,
+        "Unnamed: 5":180534945
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00T1",
+        "Unnamed: 1":"8",
+        "Unnamed: 2":1250000000,
+        "Unnamed: 3":227506560.3400000036,
+        "Unnamed: 4":234401069,
+        "Unnamed: 5":788092370.6599999666
+    },
+    {
+        "EXECUÇÃO 2319 2026":"00T3",
+        "Unnamed: 1":"3",
+        "Unnamed: 2":690009410,
+        "Unnamed: 3":134124080.5,
+        "Unnamed: 4":null,
+        "Unnamed: 5":555885329.5
+    },
+    {
+        "EXECUÇÃO 2319 2026":"2D49",
+        "Unnamed: 1":"2",
+        "Unnamed: 2":5110548,
+        "Unnamed: 3":1122016.6699999999,
+        "Unnamed: 4":1926498,
+        "Unnamed: 5":2062033.3300000001
+    },
+    {
+        "EXECUÇÃO 2319 2026":"2D49",
+        "Unnamed: 1":"3",
+        "Unnamed: 2":5000000,
+        "Unnamed: 3":5000000,
+        "Unnamed: 4":null,
+        "Unnamed: 5":null
+    }
+]

@@ -1,22 +1,25 @@
 import json
+import re
 
 # --- CONFIGURAÇÃO ---
 ARQUIVO_JSON = "fgts -reunião.json"
 ARQUIVO_HTML_ORIGEM = "index.html"
 ARQUIVO_HTML_DESTINO = "index.html"
 
+# LISTA ATUALIZADA COM AS NOVAS COLUNAS DO EXCEL
 CAMPOS_DETALHES = [
     "A CONTRATAR AVANÇAR", 
-    "A CONTRATAR GM PÚBLICO", 
     "A CONTRATAR GM PRIVADO", 
+    "A CONTRATAR GM PÚBLICO", 
     "A CONTRATAR REFROTA PRIVADO", 
+    "A CONTRATAR REFROTA PÚBLICO", 
+    "SELEÇÃO A PUBLICAR AVAÇAR", 
+    "SELEÇÃO A PUBLICAR AVANÇAR",
+    "SELEÇÃO A PUBLICAR REFROTA PRIVADO", 
     "CONTRATADO AVANÇAR", 
-    "CONTRATADO GM PÚBLICO", 
     "CONTRATADO REFROTA PRIVADO", 
     "CONTRATADO REFROTA PÚBLICO", 
-    "SELEÇÃO A PUBLICAR AVANÇAR", 
-    "SELEÇÃO A PUBLICAR GM PRIVADO", 
-    "SELEÇÃO A PUBLICAR REFROTA PRIVADO"
+    "CONTRATADO GM PÚBLICO"
 ]
 
 def fmt(val):
@@ -39,7 +42,7 @@ def gerar_submenu(row):
     html = '<details class="submenu"><summary>Ver detalhes</summary><ul>'
     for campo in CAMPOS_DETALHES:
         valor = row.get(campo)
-        if valor is not None:
+        if valor is not None and valor != "": # Evita mostrar campos vazios caso use AVAÇAR ou AVANÇAR
             html += f'<li><span class="sub-label">{campo}:</span> <span class="sub-value">{fmt(valor)}</span></li>'
     html += '</ul></details>'
     return html
@@ -52,7 +55,7 @@ except FileNotFoundError:
     print(f"❌ Erro: O arquivo '{ARQUIVO_JSON}' não foi encontrado.")
     exit()
 
-# 2. Bloco HTML unificado do FGTS (Novo Slide-Card Completo)
+# 2. Bloco HTML unificado do FGTS
 html_snippet = """
     <!-- ESTILOS EXCLUSIVOS DO FGTS -->
     <style>
@@ -65,7 +68,7 @@ html_snippet = """
     </style>
 
     <!-- NOVO SLIDE-CARD UNIFICADO PARA O FGTS (Abaixo de tudo) -->
-    <div class="slide-card" style="margin-top: 40px;">
+    <div class="slide-card" style="margin-top: 40px;" id="bloco-fgts-dinamico">
         
         <!-- Cabeçalho Principal Centralizado -->
         <header class="dashboard-header">
@@ -77,18 +80,22 @@ html_snippet = """
 """
 
 def gerar_secao_regiao(titulo, row):
-    pac_publico = row.get("A CONTRATAR GM PÚBLICO")
+    # CÁLCULOS ATUALIZADOS COM AS NOVAS COLUNAS
+    pac_publico = safe_sum(row, [
+        "A CONTRATAR GM PÚBLICO",
+        "A CONTRATAR REFROTA PÚBLICO" # Novo campo adicionado aqui
+    ])
     
     pac_privado = safe_sum(row, [
         "A CONTRATAR GM PRIVADO", 
         "A CONTRATAR REFROTA PRIVADO", 
-        "SELEÇÃO A PUBLICAR GM PRIVADO", 
         "SELEÇÃO A PUBLICAR REFROTA PRIVADO"
     ])
     
     nao_pac = safe_sum(row, [
         "A CONTRATAR AVANÇAR", 
-        "SELEÇÃO A PUBLICAR AVANÇAR"
+        "SELEÇÃO A PUBLICAR AVAÇAR", # Com erro de digitação do Excel
+        "SELEÇÃO A PUBLICAR AVANÇAR" # Escrito corretamente (segurança)
     ])
 
     html = f"""
@@ -96,7 +103,7 @@ def gerar_secao_regiao(titulo, row):
                 <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">{titulo}</h3>
                 
                 <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
+                    <!-- Coluna Principal -->
                     <div class="info-card" style="background: #f8fafc; text-align: left;">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">{fmt(row.get('LIMITE'))}</td></tr>
@@ -136,17 +143,19 @@ for row in data:
 obs = next((item for item in data if item.get("REGIÃO") == "Observações:"), None)
 if obs:
     textos_obs = []
-    for chave_obs in ["A CONTRATAR GM PÚBLICO", "A CONTRATAR GM PRIVADO", "SELEÇÃO A PUBLICAR AVANÇAR", "SELEÇÃO A PUBLICAR GM PRIVADO"]:
+    # Usando as colunas atuais que podem conter observações
+    for chave_obs in ["A CONTRATAR GM PÚBLICO", "A CONTRATAR GM PRIVADO", "A CONTRATAR REFROTA PRIVADO", "SELEÇÃO A PUBLICAR AVAÇAR"]:
         val_obs = obs.get(chave_obs)
         if val_obs:
             textos_obs.append(val_obs)
             
-    html_snippet += f"""
-            <div>
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Observações</h3>
-                <p style="font-size: 0.9rem; color: #475569; white-space: pre-line; line-height: 1.6; margin: 0;">{"<br><br>".join(textos_obs)}</p>
-            </div>
-    """
+    if textos_obs:
+        html_snippet += f"""
+                <div>
+                    <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Observações</h3>
+                    <p style="font-size: 0.9rem; color: #475569; white-space: pre-line; line-height: 1.6; margin: 0;">{"<br><br>".join(textos_obs)}</p>
+                </div>
+        """
 
 html_snippet += """
         </section>
@@ -157,50 +166,24 @@ html_snippet += """
     </div>
 """
 
-# 3. Inserção ultra segura: insere logo antes do encerramento da div presentation-wrapper
+# 3. Leitura e injeção limpa no HTML usando Marcadores à Prova de Falhas
 try:
     with open(ARQUIVO_HTML_ORIGEM, "r", encoding="utf-8") as f:
         conteudo = f.read()
 
-    # O alvo exato onde termina o primeiro card e o wrapper geral
-    alvo = '  </div> \n  </div>'
-    if alvo not in conteudo:
-        alvo = '</div> \n  </div>'
-    if alvo not in conteudo:
-        alvo = '</div> \n  </div>'
+    marcador_inicio = "<!-- INICIO_FGTS -->"
+    marcador_fim = "<!-- FIM_FGTS -->"
 
-    # Se achar o fechamento correto, injetamos logo ali em cima
-    if '</div> \n  </div>' in conteudo or '</div> \n  </div>' in conteudo:
-        # Vamos procurar pelo fechamento do container principal antes do script.js
-        partes = conteudo.rsplit('</div>', 2)
-        if len(partes) >= 2:
-            # Reconstrói inserindo o novo bloco do FGTS bem no final do presentation-wrapper
-            novo_conteudo = partes[0] + '</div>' + html_snippet + '\n  </div>\n</div>' + partes[2] if len(partes) > 2 else partes[0] + '</div>' + html_snippet + '\n  </div>\n</div>'
-            
-            # Garantimos que o script.js continue preservado no final
-            if '<script src="script.js"></script>' not in novo_conteudo:
-                novo_conteudo = conteudo.replace('<script src="script.js"></script>', html_snippet + '\n  </div>\n</div>\n\n  <script src="script.js"></script>')
-
-            with open(ARQUIVO_HTML_DESTINO, "w", encoding="utf-8") as f:
-                f.write(novo_conteudo)
-            print(f"✅ Sucesso absoluto! O arquivo '{ARQUIVO_HTML_DESTINO}' foi gerado abaixo de tudo.")
-        else:
-            raise Exception("Estrutura não encontrada")
+    if marcador_inicio in conteudo and marcador_fim in conteudo:
+        padrao = re.compile(f"{marcador_inicio}.*?{marcador_fim}", re.DOTALL)
+        novo_conteudo = re.sub(padrao, f"{marcador_inicio}\n{html_snippet}\n{marcador_fim}", conteudo)
+        
+        with open(ARQUIVO_HTML_DESTINO, "w", encoding="utf-8") as f:
+            f.write(novo_conteudo)
+        print(f"✅ Sucesso! O arquivo '{ARQUIVO_HTML_DESTINO}' foi atualizado com a nova estrutura de colunas do Excel.")
     else:
-        # Método alternativo limpo baseado na tag do script
-        script_tag = '<script src="script.js"></script>'
-        if script_tag in conteudo:
-            # Corta antes dos 2 últimos </div> que fecham o slide-card principal e o presentation-wrapper
-            pos = conteudo.rfind('</div> \n  </div>')
-            if pos == -1:
-                pos = conteudo.rfind('</div>')
-            
-            novo_conteudo = conteudo[:pos] + html_snippet + "\n    </div>\n  </div>\n\n  " + script_tag
-            with open(ARQUIVO_HTML_DESTINO, "w", encoding="utf-8") as f:
-                f.write(novo_conteudo)
-            print(f"✅ Sucesso alternativo aplicado em '{ARQUIVO_HTML_DESTINO}'!")
-        else:
-            print("❌ Erro: Estrutura do HTML não identificada.")
+        print("❌ Erro: Os marcadores não foram encontrados no index.html.")
+        print("Abra o index.html e cole <!-- INICIO_FGTS --> e <!-- FIM_FGTS --> no final do arquivo, logo antes da tag <script>.")
 
 except Exception as e:
     print(f"❌ Erro ao processar: {e}")

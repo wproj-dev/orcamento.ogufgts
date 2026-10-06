@@ -9,7 +9,7 @@
 <body>
   <div class="presentation-wrapper">
     
-    <!-- DASHBOARD ÚNICO -->
+    <!-- DASHBOARD ÚNICO DO OGU -->
     <div class="slide-card">
       
       <!-- Cabeçalho Principal Centralizado -->
@@ -193,7 +193,7 @@
 
       <div class="divider-section"></div>
 
-      <!-- SEÇÃO DE DETALHAMENTO COM POWER BI (MENU SUSPENSO) -->
+      <!-- SEÇÃO DE DETALHAMENTO COM POWER BI -->
       <section class="dashboard-section" style="margin-top: 40px;">
         <details class="actions-dropdown-container">
           <summary class="actions-dropdown-summary">
@@ -217,6 +217,10 @@
         <span>2026</span>
       </footer>
     </div>
+    <!-- FIM DO DASHBOARD OGU -->
+
+    <!-- INICIO_FGTS -->
+
     <!-- ESTILOS EXCLUSIVOS DO FGTS -->
     <style>
         .submenu { background: #ffffff; padding: 10px 14px; border-radius: 8px; border: 1px solid #e2e8f0; cursor: pointer; font-size: 0.85rem; margin-top: 10px; }
@@ -228,7 +232,7 @@
     </style>
 
     <!-- NOVO SLIDE-CARD UNIFICADO PARA O FGTS (Abaixo de tudo) -->
-    <div class="slide-card" style="margin-top: 40px;">
+    <div class="slide-card" style="margin-top: 40px;" id="bloco-fgts-dinamico">
         
         <!-- Cabeçalho Principal Centralizado -->
         <header class="dashboard-header">
@@ -242,7 +246,7 @@
                 <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Brasil</h3>
                 
                 <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
+                    <!-- Coluna Principal -->
                     <div class="info-card" style="background: #f8fafc; text-align: left;">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 6.400.000.000,00</td></tr>
@@ -256,20 +260,20 @@
                         <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 5.478.049.289,60</td></tr>
+                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 4.113.114.100,05</td></tr>
                             <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 3.658.489.957,19</td></tr>
                         </table>
                     </div>
                 </div>
 
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.948.936.226,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.155.000.210,50</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 490.558.442,61</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 442.247.871,66</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 2.553.316.561,22</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 237.912.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 709.553.730,53</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR GM PRIVADO:</span> <span class="sub-value">R$ 1.364.935.189,55</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 168.178.700,00</span></li></ul></details>
+                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.948.936.226,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.155.000.210,50</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 709.553.730,53</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 168.178.700,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 490.558.442,61</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 2.553.316.561,22</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 237.912.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 442.247.871,66</span></li></ul></details>
             </div>
     
             <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
                 <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Centro-Oeste</h3>
                 
                 <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
+                    <!-- Coluna Principal -->
                     <div class="info-card" style="background: #f8fafc; text-align: left;">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 558.464.000,00</td></tr>
@@ -289,14 +293,14 @@
                     </div>
                 </div>
 
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 18.807.909,96</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 61.750.000,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 136.099.957,27</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 124.957.952,80</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ -   </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 447.349.233,39</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 153.425.000,00</span></li></ul></details>
+                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 18.807.909,96</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 61.750.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 447.349.233,39</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 153.425.000,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 136.099.957,27</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 124.957.952,80</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ -   </span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ -   </span></li></ul></details>
             </div>
     
             <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
                 <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Nordeste</h3>
                 
                 <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
+                    <!-- Coluna Principal -->
                     <div class="info-card" style="background: #f8fafc; text-align: left;">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 1.510.048.000,00</td></tr>
@@ -316,14 +320,14 @@
                     </div>
                 </div>
 
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 10.763.500,00</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 52.250.000,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 30.587.544,36</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 261.042.697,31</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 95.000.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
+                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 10.763.500,00</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 52.250.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 261.042.697,31</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 95.000.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 30.587.544,36</span></li></ul></details>
             </div>
     
             <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
                 <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Norte</h3>
                 
                 <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
+                    <!-- Coluna Principal -->
                     <div class="info-card" style="background: #f8fafc; text-align: left;">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 456.973.000,00</td></tr>
@@ -343,14 +347,14 @@
                     </div>
                 </div>
 
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value"> R$                                                               -  </span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 87.166.300,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 63.264.813,00</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 67.000.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
+                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value"> R$                                                               -  </span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 87.166.300,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 63.264.813,00</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 67.000.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li></ul></details>
             </div>
     
             <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
                 <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Sudeste</h3>
                 
                 <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
+                    <!-- Coluna Principal -->
                     <div class="info-card" style="background: #f8fafc; text-align: left;">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.982.701.000,00</td></tr>
@@ -364,20 +368,20 @@
                         <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 4.965.095.289,80</td></tr>
+                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 3.600.160.100,25</td></tr>
                             <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.642.151.039,24</td></tr>
                         </table>
                     </div>
                 </div>
 
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.607.387.176,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 810.224.910,70</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 283.500.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 411.660.327,30</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.791.343.728,39</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 60.312.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 34.763.862,58</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR GM PRIVADO:</span> <span class="sub-value">R$ 1.364.935.189,55</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
+                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.607.387.176,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 810.224.910,70</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 34.763.862,58</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 283.500.000,00</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.791.343.728,39</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 60.312.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 411.660.327,30</span></li></ul></details>
             </div>
     
             <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
                 <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Sul</h3>
                 
                 <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
+                    <!-- Coluna Principal -->
                     <div class="info-card" style="background: #f8fafc; text-align: left;">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 891.814.000,00</td></tr>
@@ -397,14 +401,14 @@
                     </div>
                 </div>
 
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 311.977.640,04</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 143.608.999,80</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 70.958.485,34</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 312.707.369,72</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 15.600.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 227.440.634,56</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 14.753.700,00</span></li></ul></details>
+                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 311.977.640,04</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 143.608.999,80</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 227.440.634,56</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 14.753.700,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 70.958.485,34</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 312.707.369,72</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 15.600.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li></ul></details>
             </div>
     
-            <div>
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Observações</h3>
-                <p style="font-size: 0.9rem; color: #475569; white-space: pre-line; line-height: 1.6; margin: 0;">- TIC Trens: R$ 1,425 bi</p>
-            </div>
-    
+                <div>
+                    <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Observações</h3>
+                    <p style="font-size: 0.9rem; color: #475569; white-space: pre-line; line-height: 1.6; margin: 0;">- TIC Trens: R$ 1,425 bi</p>
+                </div>
+        
         </section>
         
         <footer class="slide-footer">
@@ -412,401 +416,10 @@
         </footer>
     </div>
 
-  </div>
+<!-- FIM_FGTS -->
 
-    <!-- ESTILOS EXCLUSIVOS DO FGTS -->
-    <style>
-        .submenu { background: #ffffff; padding: 10px 14px; border-radius: 8px; border: 1px solid #e2e8f0; cursor: pointer; font-size: 0.85rem; margin-top: 10px; }
-        .submenu summary { font-weight: 600; color: #475569; outline: none; }
-        .submenu ul { list-style: none; padding: 8px 0 0 0; margin: 0; }
-        .submenu li { padding: 5px 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; color: #475569; }
-        .sub-label { font-weight: 500; }
-        .sub-value { font-weight: 600; color: #1e293b; }
-    </style>
-
-    <!-- NOVO SLIDE-CARD UNIFICADO PARA O FGTS (Abaixo de tudo) -->
-    <div class="slide-card" style="margin-top: 40px;">
-        
-        <!-- Cabeçalho Principal Centralizado -->
-        <header class="dashboard-header">
-            <h1>Fundo de Garantia do Tempo de Serviço</h1>
-            <h3>Financiamento</h3>
-        </header>
-
-        <section class="dashboard-section">
-
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Brasil</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 6.400.000.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 3.724.034.875,49</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.675.965.124,51</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 5.478.049.289,60</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 3.658.489.957,19</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.948.936.226,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.155.000.210,50</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 490.558.442,61</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 442.247.871,66</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 2.553.316.561,22</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 237.912.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 709.553.730,53</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR GM PRIVADO:</span> <span class="sub-value">R$ 1.364.935.189,55</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 168.178.700,00</span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Centro-Oeste</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 558.464.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 261.057.910,07</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 297.406.089,93</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 215.175.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 466.157.143,35</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 18.807.909,96</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 61.750.000,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 136.099.957,27</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 124.957.952,80</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ -   </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 447.349.233,39</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 153.425.000,00</span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Nordeste</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 1.510.048.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 386.630.241,67</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 1.123.417.758,33</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 52.250.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 10.763.500,00</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 10.763.500,00</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 52.250.000,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 30.587.544,36</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 261.042.697,31</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 95.000.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Norte</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 456.973.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 130.264.813,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 326.708.187,00</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 87.166.300,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value"> R$                                                               -  </span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 87.166.300,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 63.264.813,00</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 67.000.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Sudeste</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.982.701.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.546.816.055,69</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 435.884.944,31</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 4.965.095.289,80</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.642.151.039,24</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.607.387.176,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 810.224.910,70</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 283.500.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 411.660.327,30</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.791.343.728,39</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 60.312.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 34.763.862,58</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR GM PRIVADO:</span> <span class="sub-value">R$ 1.364.935.189,55</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Sul</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 891.814.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 399.265.855,06</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 492.548.144,94</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 158.362.699,80</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 539.418.274,60</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 311.977.640,04</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 143.608.999,80</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 70.958.485,34</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 312.707.369,72</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 15.600.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 227.440.634,56</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 14.753.700,00</span></li></ul></details>
-            </div>
-    
-            <div>
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Observações</h3>
-                <p style="font-size: 0.9rem; color: #475569; white-space: pre-line; line-height: 1.6; margin: 0;">- TIC Trens: R$ 1,425 bi</p>
-            </div>
-    
-        </section>
-        
-        <footer class="slide-footer">
-            <span>2026</span>
-        </footer>
-    </div>
-
-    </div>
-  
-    <!-- ESTILOS EXCLUSIVOS DO FGTS -->
-    <style>
-        .submenu { background: #ffffff; padding: 10px 14px; border-radius: 8px; border: 1px solid #e2e8f0; cursor: pointer; font-size: 0.85rem; margin-top: 10px; }
-        .submenu summary { font-weight: 600; color: #475569; outline: none; }
-        .submenu ul { list-style: none; padding: 8px 0 0 0; margin: 0; }
-        .submenu li { padding: 5px 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; color: #475569; }
-        .sub-label { font-weight: 500; }
-        .sub-value { font-weight: 600; color: #1e293b; }
-    </style>
-
-    <!-- NOVO SLIDE-CARD UNIFICADO PARA O FGTS (Abaixo de tudo) -->
-    <div class="slide-card" style="margin-top: 40px;">
-        
-        <!-- Cabeçalho Principal Centralizado -->
-        <header class="dashboard-header">
-            <h1>Fundo de Garantia do Tempo de Serviço</h1>
-            <h3>Financiamento</h3>
-        </header>
-
-        <section class="dashboard-section">
-
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Brasil</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 6.400.000.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 3.724.034.875,49</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.675.965.124,51</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 5.478.049.289,60</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 3.658.489.957,19</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.948.936.226,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.155.000.210,50</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 490.558.442,61</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 442.247.871,66</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 2.553.316.561,22</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 237.912.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 709.553.730,53</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR GM PRIVADO:</span> <span class="sub-value">R$ 1.364.935.189,55</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 168.178.700,00</span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Centro-Oeste</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 558.464.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 261.057.910,07</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 297.406.089,93</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 215.175.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 466.157.143,35</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 18.807.909,96</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 61.750.000,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 136.099.957,27</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 124.957.952,80</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ -   </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 447.349.233,39</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 153.425.000,00</span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Nordeste</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 1.510.048.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 386.630.241,67</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 1.123.417.758,33</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 52.250.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 10.763.500,00</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 10.763.500,00</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 52.250.000,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 30.587.544,36</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 261.042.697,31</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 95.000.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Norte</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 456.973.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 130.264.813,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 326.708.187,00</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 87.166.300,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value"> R$                                                               -  </span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 87.166.300,00</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 63.264.813,00</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 67.000.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value"> R$                                                                -  </span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Sudeste</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.982.701.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.546.816.055,69</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 435.884.944,31</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 4.965.095.289,80</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 2.642.151.039,24</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 2.607.387.176,66</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value">R$ 2.789.935.189,55</span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 810.224.910,70</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 283.500.000,00</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value">R$ 411.660.327,30</span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 1.791.343.728,39</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 60.312.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 34.763.862,58</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR GM PRIVADO:</span> <span class="sub-value">R$ 1.364.935.189,55</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value"> R$                                                                                       -  </span></li></ul></details>
-            </div>
-    
-            <div style="margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #e2e8f0;">
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Sul</h3>
-                
-                <div class="cards-row" style="grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 12px;">
-                    <!-- Coluna Principal (Limite, Executado, Saldo) -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Limite</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 891.814.000,00</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">Valor Executado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 399.265.855,06</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Saldo</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 492.548.144,94</td></tr>
-                        </table>
-                    </div>
-                    
-                    <!-- Coluna Previsto -->
-                    <div class="info-card" style="background: #f8fafc; text-align: left;">
-                        <h4 style="margin-top: 0; color: #ea580c; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px;">Previsto</h4>
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Público</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">-</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; color: #64748b; font-weight: 500;">PAC Privado</td><td style="padding: 6px 0; border-bottom: 1px solid #e2e8f0; text-align: right; font-weight: 600; color: #0f172a;">R$ 158.362.699,80</td></tr>
-                            <tr><td style="padding: 6px 0; border-bottom: none; color: #64748b; font-weight: 500;">Não PAC</td><td style="padding: 6px 0; border-bottom: none; text-align: right; font-weight: 600; color: #0f172a;">R$ 539.418.274,60</td></tr>
-                        </table>
-                    </div>
-                </div>
-
-                <details class="submenu"><summary>Ver detalhes</summary><ul><li><span class="sub-label">A CONTRATAR AVANÇAR:</span> <span class="sub-value">R$ 311.977.640,04</span></li><li><span class="sub-label">A CONTRATAR GM PRIVADO:</span> <span class="sub-value"> R$                                                      -  </span></li><li><span class="sub-label">A CONTRATAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 143.608.999,80</span></li><li><span class="sub-label">CONTRATADO AVANÇAR:</span> <span class="sub-value">R$ 70.958.485,34</span></li><li><span class="sub-label">CONTRATADO GM PÚBLICO:</span> <span class="sub-value"> R$ -   </span></li><li><span class="sub-label">CONTRATADO REFROTA PRIVADO:</span> <span class="sub-value">R$ 312.707.369,72</span></li><li><span class="sub-label">CONTRATADO REFROTA PÚBLICO:</span> <span class="sub-value">R$ 15.600.000,00</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR AVANÇAR:</span> <span class="sub-value">R$ 227.440.634,56</span></li><li><span class="sub-label">SELEÇÃO A PUBLICAR REFROTA PRIVADO:</span> <span class="sub-value">R$ 14.753.700,00</span></li></ul></details>
-            </div>
-    
-            <div>
-                <h3 class="actions-title" style="font-size: 1.1rem; margin-bottom: 12px; color: #1e293b;">Observações</h3>
-                <p style="font-size: 0.9rem; color: #475569; white-space: pre-line; line-height: 1.6; margin: 0;">- TIC Trens: R$ 1,425 bi</p>
-            </div>
-    
-        </section>
-        
-        <footer class="slide-footer">
-            <span>2026</span>
-        </footer>
-    </div>
-
-    </div>
-  </div>
+  </div> <!-- FIM DO PRESENTATION WRAPPER -->
 
   <script src="script.js"></script>
+</body>
+</html>

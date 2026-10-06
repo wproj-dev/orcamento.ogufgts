@@ -3,7 +3,7 @@ import json
 # --- CONFIGURAÇÃO ---
 ARQUIVO_JSON = "fgts -reunião.json"
 ARQUIVO_HTML_ORIGEM = "index.html"
-ARQUIVO_HTML_DESTINO = "index_novo.html"
+ARQUIVO_HTML_DESTINO = "index.html"
 
 CAMPOS_DETALHES = [
     "A CONTRATAR AVANÇAR", 
